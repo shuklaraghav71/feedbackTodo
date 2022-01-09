@@ -1,0 +1,64 @@
+mat-icon.customIcon {
+    text-align: center;
+    width: 70%;
+    height: 30%;
+    font-size: 112px;
+    border-style: dashed;
+    border-radius: 5px;
+    box-shadow: whitesmoke;
+}
+
+mat-icon#cancel {
+    background-color: lightgray;
+    color: red
+}
+
+mat-icon#right {
+    background-color: lightgreen;
+    color: white
+}
+
+mat-icon#cancel:hover {
+    background-color: red;
+    color: white
+}
+
+mat-icon#right:hover {
+    background-color: green;
+    color: white
+}
+
+mat-icon#smiley {
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+body {
+    background-image: url(/assets/82153.jpg);
+}
+
+
+/*
+@keyframes example {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        left: 200px;
+        top: 100px;
+    }
+    50% {
+        left: 200px;
+        top: 200px;
+    }
+    75% {
+        left: 0px;
+        top: 300px;
+    }
+    100% {
+        left: 0px;
+        top: 400px;
+    }
+} */

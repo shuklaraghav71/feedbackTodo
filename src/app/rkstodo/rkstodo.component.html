@@ -1,0 +1,54 @@
+<h1 style="color:blue;background:burlywood;">todo List
+    <mat-icon #myDiv id="smiley" [ngStyle]="{'top':count+'px','left':y+'px','color':isDone?'yellow':'red'}" *ngFor="let count of list">
+        insert_emoticon</mat-icon>
+</h1>
+{{list}}
+
+<body>
+    <div class="row">
+        <div class="col-4">
+
+            <form>
+                <p style="color:white">Timer{{timer}}</p>
+                <textarea style="font-weight:bold;color:yellowgreen;width:100%;height: 50%;" rows="15" type="text" [(ngModel)]="n" name="todo">
+          </textarea>
+            </form>
+            <div class="example-label">Stroked</div>
+            <div class="example-button-row">
+                <button mat-raised-button color="primary" (click)=" onclick()" mat-stroked-button>add task</button>
+                <a [routerLink]="['/','practice']">gotopractices</a>
+                <button mat-raised-button (click)="ondelete()" color="warn">Delete</button>
+                <button mat-raised-button color="primary" (click)="onget()">get</button>
+            </div>
+        </div>
+        <div class="col-2">
+            <mat-icon id="cancel" (click)="smilyRain('cancel')" class="customIcon">cancel</mat-icon>
+            <div class="w-100"></div>
+            <mat-icon id="right" (click)="smilyRain('right')" class="customIcon">check</mat-icon>
+        </div>
+
+
+
+        <div class="col-6">
+            <table style="background-color:aqua">
+                <tr>
+                    <th>id</th>
+
+
+                    <th>mytaskString</th>
+                </tr>
+                <tr style="border: 2px solid red;background-color: aquamarine;" *ngFor="let v of taskList">
+                    <td style="border: 2px solid red;">
+                        {{v.id}}
+                    </td>
+                    <td style="border: 2px solid red;">
+                        {{v.mytaskString}}
+                    </td>
+
+                </tr>
+
+
+            </table>
+        </div>
+    </div>
+</body>

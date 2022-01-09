@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hello</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Intro</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a>home </a> </li>
+            <li><a (click)="onabout=!onabout">about</a></li>
+            <li><a (click)="oncontact=!oncontact">contact</a></li>
+            <input type="text" placeholder="Search..">
+            <button type="submit"><i class="fa fa-search"></i>Search</button>
+        </ul>
+    </nav>
+    <div *ngIf="onabout">
+        <h1>Raghav protfoio</h1>
+        <br>
+        <br>
+        <br>
+        <p>
+            Hi I am raghav shukla purcuing intigrated MCA, from AITR Indore,
+        </p>
+        <h2 class="anime">Skills</h2>
+        <br>
+        <br>
+        <br>
+        <p>
+            HTML5<br> CSS
+            <br> python
+            <br> Angular
+            <br>
+        </p>
+    </div>
+    <div *ngIf="oncontact">
+        <h3>Contact Info<br>
+        </h3>
+        <br>
+        <br>
+        <br>
+        <UL>
+            My gmail = shuklaraghav71@gmail.com<br> Contact no.= 8387001008
+        </UL>
+    </div>
+</body>
+
+</html>

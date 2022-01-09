@@ -1,0 +1,76 @@
+body {
+    color: black;
+    background-color: antiquewhite;
+    background-image: url("../../../raghav.jpg");
+    background-size: 400px;
+    background-position: right;
+}
+
+.anime {
+    background-color: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes example {
+    0% {
+        background-color: red;
+    }
+    25% {
+        background-color: yellow;
+    }
+    50% {
+        background-color: blue;
+    }
+    75% {
+        background-color: green;
+    }
+    100% {
+        background-color: red;
+    }
+}
+
+a {
+    color: white!important;
+    text-decoration: underline;
+    border: 15px;
+    border-style: ridge;
+    border-color: blueviolet;
+    margin: 100px;
+}
+
+li {
+    display: inline;
+}
+
+nav {
+    background-color: black;
+}
+
+h1 {
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+}
+
+a:hover {
+    color: green !important;
+    background-color: rgb(157, 172, 116)
+}
+
+h2 {
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+}
+
+h3 {
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+}
