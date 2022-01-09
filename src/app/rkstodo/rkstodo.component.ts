@@ -16,6 +16,7 @@ export class RkstodoComponent implements OnInit {
   taskList: any;
   isDone: boolean=false;
   timer: number=0;
+  ms: number=1000;
    constructor(private http: HttpClient) {
 
   }
@@ -30,12 +31,17 @@ export class RkstodoComponent implements OnInit {
  ngOnInit() {
     // let v =  await this.toPromise();
     // console.log(v)
-   let ms = 2000
+
+
+
+ }
+  startTask() {
+
    let c = 1;
      let a= setInterval(() => {
        this.timer = c;
        c++;
-       if (this.timer == ms) {
+       if (this.timer == this.ms) {
          clearInterval(a);
          setTimeout(() => {
 
@@ -51,9 +57,7 @@ export class RkstodoComponent implements OnInit {
      console.log("break interval")
 
 
-
-
- }
+  }
    @ViewChild('myDiv')
   myDiv!: ElementRef;
   ngAfterViewInit() {
@@ -70,12 +74,14 @@ export class RkstodoComponent implements OnInit {
 
 
      let i = 0;
-    setInterval(() => {
+   let si= setInterval(() => {
       console.log("interval")
       i++
       for (let k = 0; k < 30;k++){
-        this.list.unshift(i)}
-
+        this.list.push(i)}
+      if (i == 10) {
+        clearInterval(si);
+}
 
 
 // console.log("interval for")

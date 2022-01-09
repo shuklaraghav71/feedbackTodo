@@ -1,15 +1,17 @@
 <h1 style="color:blue;background:burlywood;">todo List
-    <mat-icon #myDiv id="smiley" [ngStyle]="{'top':count+'px','left':y+'px','color':isDone?'yellow':'red'}" *ngFor="let count of list">
-        insert_emoticon</mat-icon>
+
 </h1>
 {{list}}
 
 <body>
+
     <div class="row">
         <div class="col-4">
 
             <form>
-                <p style="color:white">Timer{{timer}}</p>
+                <p style="color:white">Timer{{timer}}</p><input type="number" [(ngModel)]="ms" name="deadline" title="type task deadline in ms">
+                <div class="w-100"></div>
+                <button (click)="startTask()" class="primary">StartTask</button>
                 <textarea style="font-weight:bold;color:yellowgreen;width:100%;height: 50%;" rows="15" type="text" [(ngModel)]="n" name="todo">
           </textarea>
             </form>
@@ -51,4 +53,6 @@
             </table>
         </div>
     </div>
+    <mat-icon #myDiv id="smiley" [ngStyle]="{'top':count+'px','left':y+'px','color':isDone?'yellow':'red'}" *ngFor="let count of list">
+        insert_emoticon</mat-icon>
 </body>
